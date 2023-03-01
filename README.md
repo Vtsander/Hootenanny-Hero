@@ -27,5 +27,7 @@
 ## Contact Info
  - Github - @Vtsander
  - Email - nguyenveroneca@yahoo.com
+## Wireframe
+ - <img src="./assets/Wireframe.png">
 ## Photos of Project
  - 
