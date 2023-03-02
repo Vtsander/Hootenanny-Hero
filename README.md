@@ -35,19 +35,19 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 ## As an event host:
 *I would like to plan an event and have it tailored to my specific needs and vision.*
 ***
-   **BUILDING** for my  event. Building a package of flowers, caterers, a venue, security and more,  all in one easy to use place. 
+   **BUILDING** for my  event. Building a package of flowers, caterers, venue, security and more,  all in one easy to use place. 
 
-   **Budgeting** remaining within my budget is top priority. Having moany options to choose from and staying within my budget is my #1 goal while planning an event.
+   **Budgeting** remaining within my budget is top priority. Having many options to choose from and staying within my budget is my #1 goal while planning an event.
 
    **DISCOVER** new venues, themes and catering options, is a must.
  
 
- *I would like to save my profile, which would give me easy access to my saved events and future interests*
+ *I would like to save my profile, which would give me easy access to my current and past events and future interests*
  ***
    
-   **SAVE** my profile info i.e username, email address and events.
+   **SAVE** my username, email address and events.
 
-   **Build** my event as to my specific requirements easily.
+   **Build** my event to my specific requirements easily.
 
    **Payment** to have everything booked and ready to go, incluiding my payment in one place.
  
