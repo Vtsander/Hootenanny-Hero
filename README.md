@@ -1,31 +1,46 @@
 # Hootenanny Hero
 
 
-# Hootenanny Hero
+
 **Hootenanny Hero** is an event planning application built using HTML, CSS, JS, MySQL, Handlebars.js, Sequelize, Json, insomnia, prettier, bootstrap, express, Stripe and node.js.
 
+<br>
 
 ## Images of the deployed website:
 ***
 
+<br>
+
 ## Home Page
 ![Image of the Home page]
+
+<br>
 
 ## Login Page
 ![Image of the Login Page]
 
+<br>
+
 ## Create a Profile Page
 ![Image of the Profile Page]
+
+<br>
 
 ## Event Building Page
 ![Image of the Event Building Page]
 
+<br>
+
 ## Event Budgeting Page
 ![Image of the Event Budgeting page]
+
+<br>
 
 ## Check Out Page
 ![Image of the Check Out page]
 
+
+<br>
 
 
 ## User Story
@@ -33,6 +48,10 @@
 Welcome to our event planner website, your one-stop-shop for creating unforgettable events. Whether you're planning a corporate conference, a wedding, or a birthday party, our website has everything you need to make your event a success. We also offer a range of event planning tools to help you stay organized and on top of your to-do list. With our event planner website, you can plan your dream event without the stress and hassle. So why wait? Sign up now and start planning your perfect event today! 
 
 ## As an event host:
+***
+
+<br>
+
 *I would like to plan an event and have it tailored to my specific needs and vision.*
 ***
    **BUILDING** for my  event. Building a package of flowers, caterers, venue, security and more,  all in one easy to use place. 
@@ -41,6 +60,8 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
    **DISCOVER** new venues, themes and catering options, is a must.
  
+
+ <br>
 
  *I would like to save my profile, which would give me easy access to my current and past events and future interests*
  ***
@@ -51,50 +72,63 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
    **Payment** to have everything booked and ready to go, incluiding my payment in one place.
  
+ <br>
 
  ## Wireframes
  ***
   **Wireframes** have been included, to show the conceptual design of the webiste. Giving the basic layout and functionality.
  
+ <br>
 
   ## Image of the Home Page Wireframe
   ***
   ![Image of Home page WireFrame](client/src/images/hhomepage.png)
 
+<br>
 
   ## Image of the Login Page Wireframe
   ***
   ![Image of Login WireFrame](client/src/images/hlogin.png)
 
+<br>
+
   ## Image of the Profile Page  Wireframe
   ***
   ![Profile Page](client/src/images/hprofile.png)
 
+<br>
+
   ## Image of the Event Buuilding Wireframe
   ***
   ![Event Building](client/src/images/eventbuilding.png)
+
+<br>
 
   ## Image of the Event Budgeting Wireframe
   ***
 
   ![Event Budgeting](client/src/images/hbudgetinggraph.png)
  
+<br>
+
   ## Image of the Checkout Page  Wireframe
   ***
   ![Check Out](client/src/images/hcheckout.png)
 
-  
+  <br>
  
   ## Features
   ***
   
   Features of the deployed application and repository are as follows:
 
+<br>
+
   ## THIRD PARTY APIs
   ***
-   Trefle | The plants API
-   Trefle is a botanical API and data source.
-       *http://trefle.io/
+   [ Api info ]
+
+   <br>
 
   ## TECHNOLOGY USED
   ***
@@ -113,22 +147,35 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
     Prettier
     Stripe
  
+<br>
+
   ## NEW TECHNOLOGY (NOT COVERED IN CLASS)
   ***
   *Stripe
+
+<br>
 
 ## THE DEPLOYED REPO CAN BE FOUND AT THE FOLLOWING URL:
 ***
 [ Deployed App ]
 
+<br>
+
   ## INSTALLATION OF THE REPO FROM GITHUB
   ***
   A copy of the repository can be cloned at [Click Here](https://github.com/Vtsander/Hootenanny-Hero) Simply click on the repo and select **Clone**. From the drop down menu select the copy icon. Type (directly into your terminal):
+  
+  ```
   'git clone' + 'the repo link' + enter.
+  ```
+
+  <br>
 
   ## FUTURE ITERATIONS
   ***
-  **FORUMS**- We would like to implement a forum that will allow users to collaborate with like mind individuals. Where they can ask questions, share their experiences or simply make friends with fellow plant lovers.
+  **FUTURE ITERATIONS**- 
+
+  <br>
   
   ## CREDITS
   ***
@@ -138,6 +185,7 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
   2. Veroneca Sander github: https://github.com/Vtsander
   3. Jingmey Sherpa github: https://github.com/jsherpss
  
+ <br>
 
 - - -
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
