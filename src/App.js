@@ -1,10 +1,10 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../../src/components/pages/Home';
-import Events from '../../src/components/pages/Events';
-import Login from '../../src/components/pages/Login';
-import Profile from '../../src/components/pages/Profile';
+import Home from './components/pages/Home';
+import Events from './components/pages/Events';
+import Login from './components/pages/Login';
+import Profile from './components/pages/Profile';
 
 const client = new ApolloClient({
   uri: '/graphql',
