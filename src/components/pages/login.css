@@ -1,8 +1,12 @@
+/*.login.css {
+  background-image: url('../../assets/images/hhlogin1.png');
+}*/
+
 body {
   background-color: #baa0be;
-  background-image: url('../../assets/images/hhlogin1.png');
-  background-size: cover;
-}
+  /*background-image: url('../../assets/images/hhlogin1.png');
+  background-size: cover;*/
+  }
 
  h2 {
   font-size: 2rem;

@@ -6,9 +6,9 @@ import Login from './Login';
 function Navbar() {
   const [showLoginForm, setShowLoginForm] = useState(false);
 
-  const handleLoginClick = () => {
+  /*const handleLoginClick = () => {
     setShowLoginForm(true);
-  };
+  };*/
 
   const handleCancelClick = () => {
     setShowLoginForm(false);
