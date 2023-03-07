@@ -12,8 +12,8 @@ body {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: -50px;
+  margin-top: 200px;
+  margin-bottom: -100px;
 } 
 
 .form-container {
@@ -24,6 +24,7 @@ body {
   }
   
   .login-form {
+    font-weight: bold;
     display: block;
     justify-content: center;
     padding: 20px;
@@ -44,7 +45,7 @@ body {
   
   button {
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border: none;
     border-radius: 5px;
     background-color: #7d4488;
@@ -77,6 +78,6 @@ body {
   label {
     display: inline-flex;
     margin-top: 80px;
-    color:rgba(32, 14, 37, 0.5)
+    color:rgb(255, 255, 255)
   }
   
