@@ -7,6 +7,7 @@ import Login from './components/pages/Login';
 import Profile from './components/pages/Profile';
 import ContactUs from './components/pages/ContactUs';
 
+
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
@@ -23,6 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/contactus" element={<ContactUs />} />
+
           </Routes>
         </div>
       </Router>
