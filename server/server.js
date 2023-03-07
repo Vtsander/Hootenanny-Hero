@@ -5,7 +5,7 @@ const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schema')
 require('dotenv').config();
 
-console .log(process.env)
+console.log(process.env)
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,7 +14,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers
 });
-const app = express();
+
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -36,18 +36,21 @@ app.post("/checkout", async (req, res) => {
           quantity: 3
       }
   ]
+
   */
   console.log(req.body);
-    const items = req.body.items;
-    let lineItems = [];
-    items.forEach((item)=> {
-        lineItems.push(
-            {
-                price: item.id,
-                quantity: item.quantity
-            }
-        )
-    });
+  const items = req.body.items;
+  let lineItems = [];
+  items.forEach((item)=> {
+      lineItems.push(
+          {
+              price: item.id,
+              quantity: item.quantity
+          }
+      )
+  });
+});
+
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
