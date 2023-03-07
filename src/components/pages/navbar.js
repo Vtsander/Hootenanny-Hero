@@ -18,10 +18,18 @@ function Navbar() {
     <>
       <nav>
         <ul>
+<<<<<<< HEAD
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/login">Login</Link></li>
+          <li><Link to="/events">Events</Link></li>
+          <li><Link to="/contactus">Contact Us</Link></li>
+          <li><Link to="/budget">Budget</Link></li>
+=======
           <li><Link to="/">Home</Link></li>
           <li><Link to="/login">Login</Link></li>
           <li><Link to="/events.js">Events</Link></li>
           <li><Link to="/ContactUs">Contact Us</Link></li>
+>>>>>>> 152eb5dd8d53599e6d15cafd7fefb873dc077694
         </ul>
       </nav>
       <div className={`overlay ${showLoginForm ? 'show' : ''}`} onClick={handleCancelClick}></div>

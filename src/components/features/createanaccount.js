@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 
 function createAccount() {
-    const username = document.getElementById('username');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const confirmPassword = document.getElementById('confirm-password');
-  
-    if (username === '' || email === '' || password === '' || confirmPassword === '') {
-      alert('Please fill out all fields!');
-      return;
-    }
-  
-    if (password !== confirmPassword) {
-      alert('Passwords do not match!');
-      return;
-    }
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
 
-    const form = document.getElementById('create-account');
-    form.submit();
-  };
+  if (username === '' || email === '' || password === '' || confirmPassword === '') {
+    alert('Please fill out all fields!');
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert('Passwords do not match!');
+    return;
+  }
+
+  const user = { username, email, password };
+  localStorage.setItem('user', JSON.stringify(user));
+
+  window.location.href = 'profile.html';
+};
+
 
 const CreateAccountForm = () => {
   const [name, setName] = useState('');
