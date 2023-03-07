@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
+import DoughnutChart from './DoughnutChart';
 
-const Checkout = ({ amount, onToken }) => {
-  const [product] = useState({
-    name: 'My Product',
-    price: amount,
-  });
+const MyComponent = () => {
+  const [amount, setAmount] = useState(0);
 
   const handleToken = (token) => {
-    onToken(token); // Pass the token to the parent component (in this case, the App component)
+    // Handle the token received from Stripe
   };
 
   return (
-    <StripeCheckout
-      name={product.name}
-      description={`Your total is $${product.price}`}
-      amount={product.price * 100} // Stripe requires the price in cents
-      token={handleToken}
-      stripeKey={process.env.API_KEY}
-    >
-      <button>Checkout</button>
-    </StripeCheckout>
+    <div>
+      <DoughnutChart />
+      <StripeCheckout
+        name="My Product"
+        description={`Your total is $${amount}`}
+        amount={amount * 100} // Stripe requires the price in cents
+        token={handleToken}
+        stripeKey={process.env.API_KEY}
+        onToken={(token) => handleToken(token)}
+      >
+        <button onClick={() => setAmount(10)}>Checkout</button>
+      </StripeCheckout>
+    </div>
   );
 };
 
-export default Checkout;
+export default MyComponent;
