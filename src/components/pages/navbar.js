@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import Login from './Login';
-import { useState } from 'react';
+
 
 function Navbar() {
   const [showLoginForm, setShowLoginForm] = useState(false);
