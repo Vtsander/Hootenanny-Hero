@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 /*import firebase from 'firebase/app';
 import 'firebase/auth';*/
+import { useNavigate } from 'react-router-dom';
 import './contactUs.css';
 import Navbar from './navbar';
 
@@ -8,7 +9,9 @@ const SubmitContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   /*const [password, setPassword] = useState('');*/
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,15 +35,18 @@ const SubmitContactForm = () => {
       return false;
     }
 
-    /*firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(() => {
-        const form = document.getElementById('contact-form');
-        form.submit();
-      })
-      .catch((error) => {
-        console.log(error);
-      });*/
+    setSubmitted(true);
   };
+
+  if (submitted) {
+    navigate('/ThankYou');
+
+    return (
+      <div className="center">
+        <h1>Thank You!</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="center contact-form-container">
@@ -54,7 +60,7 @@ const SubmitContactForm = () => {
           Email:
           <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
-        <label>
+        <label class="message">
           Message:
           <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
         </label>
