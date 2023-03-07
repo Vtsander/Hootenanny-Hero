@@ -17,7 +17,7 @@ const Checkout = ({ amount, onToken }) => {
       description={`Your total is $${product.price}`}
       amount={product.price * 100} // Stripe requires the price in cents
       token={handleToken}
-      stripeKey={process.env.REACT_APP_STRIPE_KEY}
+      stripeKey={process.env.API_KEY}
     >
       <button>Checkout</button>
     </StripeCheckout>
