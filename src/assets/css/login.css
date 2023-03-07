@@ -4,9 +4,15 @@
 
 body {
   background-color: #baa0be;
-  /*background-image: url('../../assets/images/hhlogin1.png');
-  background-size: cover;*/
   }
+
+  /*img {
+    background-color: #baa0be;
+    background-image: url('../../assets/images/hhlogin1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px 1200px;
+    }*/
 
  h2 {
   font-size: 2rem;
@@ -15,6 +21,12 @@ body {
   margin-top: 200px;
   margin-bottom: -100px;
 } 
+
+/*.hhlogin1 {
+  width: 500px;
+  height: 400px;
+  margin-top: 200px;
+}*/
 
 .form-container {
   display: flex;
@@ -78,6 +90,6 @@ body {
   label {
     display: inline-flex;
     margin-top: 80px;
-    color:rgb(255, 255, 255)
+    color:rgb(57, 35, 59)
   }
   

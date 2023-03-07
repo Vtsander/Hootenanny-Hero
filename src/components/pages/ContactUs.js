@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 /*import firebase from 'firebase/app';
 import 'firebase/auth';*/
 import { useNavigate } from 'react-router-dom';
-import './contactUs.css';
+import '../../assets/css/contactUs.css';
 import Navbar from './navbar';
 
 const SubmitContactForm = () => {

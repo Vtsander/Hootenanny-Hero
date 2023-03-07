@@ -7,6 +7,8 @@ import Login from './components/pages/Login';
 import Profile from './components/pages/Profile';
 import ContactUs from './components/pages/ContactUs';
 import ThankYou from './components/pages/ThankYou';
+/*import Budget from './components/pages/Budget';*/
+/*import LoggedInNavbar from './components/LoggedInNavbar';*/
 /*import firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './firebaseConfig';
@@ -32,6 +34,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/ThankYou" element={<ThankYou />} />
+           {/* <Route path="/Budget" element={<Budget />} />*/}
           </Routes>
         </div>
       </Router>

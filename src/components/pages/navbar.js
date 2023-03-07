@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
+import '../../assets/css/navbar.css';
 import Login from './Login';
 
 function Navbar() {
