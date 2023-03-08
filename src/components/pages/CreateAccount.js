@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './CreateAccount.css'
 
 function createAccount() {
   const username = document.getElementById('username').value;
@@ -52,6 +53,7 @@ const CreateAccountForm = () => {
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
       <button type="submit" onClick={createAccount}>Submit</button>
+      <button type="button" className="cancel-button" onClick={() => { window.location.href = '/'; }}>Cancel</button>
     </form>
   );
 };

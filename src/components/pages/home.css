@@ -3,21 +3,26 @@
    /*box-sizing: border-box;*/
     margin: 0;
     padding: 0;
+}
  
-  }
+
 
   @font-face {
     font-family: 'Handlee';
     src: url('/src/fonts/Handlee-Regular.ttf');
   }
   
+
   body {
     font-family: 'Handlee', sans-serif;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      background-color: #e0c8eb;
-      width: 100%;
-      color:rgb(61, 20, 85);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    min-height: 100vh;
+    color:rgb(61, 20, 85);
+    background-image: linear-gradient(to bottom, #e0c8eb, #d1ade2, rgb(83, 50, 102));
+    height: 100%;
+    background-attachment: fixed;
   }
     
  .home-container {

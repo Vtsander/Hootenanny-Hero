@@ -1,0 +1,38 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+    height: 100%;
+  }
+  
+  .form-container label {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  
+  .form-container label input {
+    margin-left: 10px;
+  }
+  
+  .form-container button {
+    margin-top: 20px;
+  }
+  
+  .form-container .cancel-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-container {
+      width: 100%;
+    }
+  }
