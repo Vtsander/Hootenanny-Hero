@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './login.css';
+import '../../assets/css/login.css';
+/*import CreateAccount from './CreateAccount';*/
+/*import hhlogin1 from '../../assets/images/hhlogin1.png';*/
 import { useNavigate } from 'react-router-dom';
+import Navbar from './navbar';
 
 function Login({ onLogin }) {
   const [emailOrUsername, setEmailOrUsername] = useState('');
@@ -23,7 +26,9 @@ function Login({ onLogin }) {
 
   return (
     <>
+     <Navbar />
       <h2>Login to start planning your next event!</h2>
+      {/*<img src={hhlogin1} alt="hhlogin1" className="hhlogin1" /> */}
       <div className="form-container">
         <form onSubmit={handleFormSubmit} className="login-form">
           <label>
@@ -38,7 +43,10 @@ function Login({ onLogin }) {
             <button type="submit">Log In</button>
             <button type="button">
               <Link to="/">Cancel</Link>
-            </button>
+              </button>
+            </div>  
+              <div className="create-profile-link">
+              <Link to="/login/CreateAccount">Create a Profile</Link>        
           </div>
         </form>
       </div>

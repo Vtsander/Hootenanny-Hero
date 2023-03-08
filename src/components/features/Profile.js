@@ -1,5 +1,21 @@
 import React, { useState } from 'react';
 
+function displayProfile() {
+    const userString = localStorage.getItem('user');
+    const user = JSON.parse(userString);
+  
+    // Display user information
+    const nameElement = document.getElementById('name');
+    const usernameElement = document.getElementById('username');
+    const emailElement = document.getElementById('email');
+  
+    nameElement.textContent = user.username;
+    usernameElement.textContent = user.username;
+    emailElement.textContent = user.email;
+  }
+  
+  displayProfile();
+  
 const ProfilePage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

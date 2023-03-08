@@ -3,20 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "^3.7.9",
+    "@apollo/client": "^3.7.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
     "chartjs-react": "^4.1.0",
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
+    "date-fns": "^2.29.3",
+    "firebase": "^9.17.2",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-minimal-pie-chart": "^8.4.0",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "react-stripe-checkout": "^2.6.3",
     "stripe": "^11.13.0",
+    "recharts": "^2.4.3",
     "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "chart.js": "^4.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
