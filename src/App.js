@@ -8,8 +8,8 @@ import Profile from './components/pages/Profile';
 import ContactUs from './components/pages/ContactUs';
 import ThankYou from './components/pages/ThankYou';
 import CreateAccount from './components/pages/CreateAccount';
-/*import Budget from './components/pages/Budget';*/
-/*import LoggedInNavbar from './components/LoggedInNavbar';*/
+import Budget from './components/pages/Budget';
+import LoggedInNavbar from './components/LoggedInNavbar';
 /*import firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './firebaseConfig';
@@ -35,8 +35,9 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/ContactUs" element={<ContactUs />} />
             <Route path="/ThankYou" element={<ThankYou />} />
-           {/* <Route path="/Budget" element={<Budget />} />*/}
+            <Route path="/Budget" element={<Budget />} />
            <Route path="/login/CreateAccount" element={<CreateAccount />} />
+           <Route path="/NewEvent" element={<CreateAccount />} />
           </Routes>
         </div>
       </Router>
