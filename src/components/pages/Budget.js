@@ -3,7 +3,7 @@ import { PieController, LinearScale, Element, TimeScale, Tooltip } from 'chart.j
 import 'chartjs-adapter-date-fns';
 import { enUS } from 'date-fns/locale';
 import { ReactChart } from 'chartjs-react';
-import LoggedInNavbar from './pages/LoggedInNavbar';
+//import LoggedInNavbar from './pages/LoggedInNavbar';
 
 // Register modules,
 // this example for time scale and linear scale
@@ -50,7 +50,7 @@ const handleCheckboxChange = (index) => {
 return (
     <>
     <div>
-    <LoggedInNavbar />
+  {/*  <LoggedInNavbar /> */}
         <input type="checkbox" onChange={() => handleCheckboxChange(0)} />
         <label>Floral</label>
     </div>
