@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Handlee';
+  src: url('./fonts/Handlee-Regular.ttf');
+}
+
+body, html {
+  font-family: 'Handlee', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+
 .App {
   text-align: center;
 }
