@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import LoggedInNavbar from './LoggedInNavbar';
+
+
 
 const NewEvent = () => {
   const [flowers, setFlowers] = useState({
@@ -68,6 +71,7 @@ const NewEvent = () => {
 
   return (
     <div className="new-event-container">
+    <LoggedInNavbar />
       <h1>Select Your Event Packages</h1>
       <div className="package-container">
         <h3>Flowers</h3>
