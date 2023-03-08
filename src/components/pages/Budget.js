@@ -1,70 +1,56 @@
-import React, { useState } from 'react';
-import { PieController, LinearScale, Element, TimeScale, Tooltip } from 'chart.js';
-import 'chartjs-adapter-date-fns';
-import { enUS } from 'date-fns/locale';
-import { ReactChart } from 'chartjs-react';
-import LoggedInNavbar from './pages/LoggedInNavbar';
+import React from "react";
+import "./budget.css";
+import { PieChart, Pie, Cell} from "recharts";
+import LoggedInNavbar from './LoggedInNavbar';
 
-// Register modules,
-// this example for time scale and linear scale
-ReactChart.register(PieController, LinearScale, Element, TimeScale, Tooltip);
 
-// options of chart similar to v2 with a few changes
-// https://www.chartjs.org/docs/next/getting-started/v3-migration/
-const chartOption = {
-    responsive: true,
-    scales: {
-        x: {
-          type: 'time',
-          adapters: {
-            date: enUS,
-          },
-        },
-        y: {
-          type: 'linear',
-        },
-      },
-    };
-
-// data of chart similar to v2, check the migration guide
-const initialChartData = {
-    labels: ['Floral', 'Catering', 'Decor'],
-    datasets: [
-      {
-        label: '# of Votes',
-        data: [12, 19, 3],
-        backgroundColor: ['Floral', 'Catering', 'Decor'],
-      },
-    ],
-  };
-
-const PieChart = () => {
-const [chartData, setChartData] = useState(initialChartData);
-
-const handleCheckboxChange = (index) => {
-    const newChartData = { ...chartData };
-    newChartData.datasets[0].data[index] = newChartData.datasets[0].data[index] === 0 ? 1 : 0;
-    setChartData(newChartData);
-};
-
-return (
-    <>
-    <div>
-    <LoggedInNavbar />
-        <input type="checkbox" onChange={() => handleCheckboxChange(0)} />
-        <label>Floral</label>
-    </div>
-    <div>
-        <input type="checkbox" onChange={() => handleCheckboxChange(1)} />
-        <label>Catering</label>
-    </div>
-    <div>
-        <input type="checkbox" onChange={() => handleCheckboxChange(2)} />
-        <label>Decor</label>
-    </div>
-    <ReactChart type="piechart" data={chartData} options={chartOption} />
-    </>
-);
-};
+const BudgetPieChart = () => {
+  const data = [
+    { name: "Florals", value: 10000},
+    { name: "Catering", value: 10000},
+    { name: "Decor", value: 10000},
+    { name: "Dress", value: 10000},
+    { name: "Misc", value: 10000},
+  ];
   
-export default PieChart;
+const COLORS = ['#672762', '#d321c6','#cd64c7',  '#ea9fe5', '#543152'];
+
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+      {`${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
+  return (
+    <div style={{textAlign: "center"}}>
+     <LoggedInNavbar />
+      <h1>Calculated Budget</h1>
+      <div className="Budget">
+      <PieChart width={400} height={400}>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            label={renderCustomizedLabel}
+            outerRadius={200}
+            fill="#8884d8"
+            dataKey="value"
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+        </PieChart>
+      </div>
+    </div>
+  )
+}
+
+export default BudgetPieChart;
