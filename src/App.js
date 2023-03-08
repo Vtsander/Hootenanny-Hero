@@ -9,7 +9,7 @@ import ContactUs from './components/pages/ContactUs';
 import ThankYou from './components/pages/ThankYou';
 import CreateAccount from './components/pages/CreateAccount';
 import Budget from './components/pages/Budget';
-/*import LoggedInNavbar from './components/LoggedInNavbar';*/
+/*import LoggedInNavbar from './components/LoggedInNavbar';
 /*import firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './firebaseConfig';
@@ -37,6 +37,7 @@ function App() {
             <Route path="/ThankYou" element={<ThankYou />} />
             <Route path="/Budget" element={<Budget />} />
            <Route path="/login/CreateAccount" element={<CreateAccount />} />
+           <Route path="/NewEvent" element={<CreateAccount />} />
           </Routes>
         </div>
       </Router>
