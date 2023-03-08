@@ -1,6 +1,7 @@
 import React from "react";
 import "./budget.css";
 import { PieChart, Pie, Cell} from "recharts";
+import LoggedInNavbar from './LoggedInNavbar';
 
 
 const BudgetPieChart = () => {
@@ -12,7 +13,7 @@ const BudgetPieChart = () => {
     { name: "Misc", value: 10000},
   ];
   
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FFFFHH'];
+const COLORS = ['#672762', '#d321c6','#cd64c7',  '#ea9fe5', '#543152'];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -28,6 +29,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 };
   return (
     <div style={{textAlign: "center"}}>
+     <LoggedInNavbar />
       <h1>Calculated Budget</h1>
       <div className="Budget">
       <PieChart width={400} height={400}>
@@ -37,7 +39,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
             cy="50%"
             labelLine={false}
             label={renderCustomizedLabel}
-            outerRadius={80}
+            outerRadius={200}
             fill="#8884d8"
             dataKey="value"
           >
