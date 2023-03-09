@@ -15,6 +15,9 @@ const Profile = () => {
       <LoggedInNavbar />
       <div className="profile-info">
         <img className="profile-image" src="https://via.placeholder.com/150" alt="Profile" />
+        <div className="upload-container">
+        <button className="upload-button">Upload</button>
+      </div>
         <div className="profile-details">
           <p>Name: {name}</p>
           <p>Username: {username}</p>

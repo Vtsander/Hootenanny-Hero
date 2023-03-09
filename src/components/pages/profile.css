@@ -1,6 +1,10 @@
 .profile-info {
-    margin-top: 100px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+  } 
 
 .profile-container {
     display: flex;
@@ -10,12 +14,12 @@
     margin-top: 50px;
   }
 
- h1 {
+ /*h1 {
     font-size: 4rem;
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
-  }
+  }*/
   
   .profile-image {
     display: flex;
@@ -25,6 +29,7 @@
     width: 400px;
     height: 400px;
     margin-bottom: 20px;
+    margin-top: 100px;
   }
   
   .profile-details {
@@ -55,6 +60,27 @@
   .social-icon:hover {
     color: #555;
   }
+
+  /*.upload-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }*/
+  
+  .upload-button {
+    background-color: #773a8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+
 
   /* Styles for screens larger than or equal to 768px */
 @media (min-width: 768px) {

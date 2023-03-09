@@ -52,23 +52,24 @@ const SubmitContactForm = () => {
   }
 
   return (
-    <div className="center contact-form-container">
-      <Navbar />
-      <form id="contact-form" onSubmit={handleSubmit}>  
-        <label>
-          Name:
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-        <label>
-          Email:
-          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </label>
-        <label class="message">
-          Message:
-          <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+    <div>
+        <Navbar />
+      <div className="center contact-form-container">
+        <form id="contact-form" onSubmit={handleSubmit}>  
+          <label>
+            Name:
+            <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+          </label>
+          <label>
+            Email:
+            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </label>
+          <label class="message">
+            Message:
+            <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
       <footer className="footer">
         <div className="social-icons">
         <Link to="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></Link>
@@ -77,6 +78,7 @@ const SubmitContactForm = () => {
         <Link to="https://www.snapchat.com"><FontAwesomeIcon icon={faSnapchat} /></Link>
         </div>
       </footer>
+    </div>
     </div>
   );
 };
