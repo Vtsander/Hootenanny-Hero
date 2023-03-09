@@ -5,6 +5,8 @@ import '../../assets/css/login.css';
 /*import hhlogin1 from '../../assets/images/hhlogin1.png';*/
 import { useNavigate } from 'react-router-dom';
 import Navbar from './navbar';
+import auth from '../utils/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function Login({ onLogin }) {
   const [emailOrUsername, setEmailOrUsername] = useState('');
@@ -24,9 +26,21 @@ function Login({ onLogin }) {
     navigate('/profile');
   };
 
+  const login = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, emailOrUsername, password)
+
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <>
-     <Navbar />
+      <Navbar />
       <h2>Login to start planning your next event!</h2>
       {/*<img src={hhlogin1} alt="hhlogin1" className="hhlogin1" /> */}
       <div className="form-container">
@@ -40,13 +54,13 @@ function Login({ onLogin }) {
             <input type="password" value={password} onChange={handlePasswordChange} />
           </label>
           <div className="button-container">
-            <button type="submit">Log In</button>
+            <button type="submit" onClick={login}>Log In</button>
             <button type="button">
               <Link to="/">Cancel</Link>
-              </button>
-            </div>  
-              <div className="create-profile-link">
-              <Link to="/login/CreateAccount">Create a Profile</Link>        
+            </button>
+          </div>  
+          <div className="create-profile-link">
+            <Link to="/login/CreateAccount">Create a Profile</Link>        
           </div>
         </form>
       </div>

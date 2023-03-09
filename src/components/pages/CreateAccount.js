@@ -1,61 +1,66 @@
 import React, { useState } from "react";
-import './CreateAccount.css'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import './CreateAccount.css';
 
-function createAccount() {
-  const username = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const confirmPassword = document.getElementById('confirm-password').value;
-
-  if (username === '' || email === '' || password === '' || confirmPassword === '') {
-    alert('Please fill out all fields!');
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    alert('Passwords do not match!');
-    return;
-  }
-
-  const user = { username, email, password };
-  localStorage.setItem('user', JSON.stringify(user));
-
-  window.location.href = 'profile.html';
+const firebaseConfig = {
+  apiKey: "AIzaSyAqJkFz1-5jWC1MVnjPCdV0kfLLdkBiSA8",
+  authDomain: "hotenanny-hero.firebaseapp.com",
+  projectId: "hotenanny-hero",
+  storageBucket: "hotenanny-hero.appspot.com",
+  messagingSenderId: "1085708570645",
+  appId: "1:1085708570645:web:d4dfc4faf1b03ac210be1c"
 };
+firebase.initializeApp(firebaseConfig);
 
-
-const CreateAccountForm = () => {
-  const [name, setName] = useState('');
+const CreateAccount = () => {
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleCreateAccount = () => {
+    if (username === '' || email === '' || password === '' || confirmPassword === '') {
+      alert('Please fill out all fields!');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        window.location.href = 'profile.html';
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        alert(errorMessage);
+      });
   };
 
   return (
-    <form onSubmit={handleSubmit}>  
-      <label>
-        Name:
-        <input type="name" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <label>
-        Username:
-        <input type="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </label>
-      <button type="submit" onClick={createAccount}>Submit</button>
-      <button type="button" className="cancel-button" onClick={() => { window.location.href = '/'; }}>Cancel</button>
-    </form>
+    <div>
+      <label htmlFor="username">Username</label>
+      <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+  
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+  
+      <label htmlFor="password">Password</label>
+      <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+  
+      <label htmlFor="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+  
+      <button onClick={handleCreateAccount}>Create Account</button>
+    </div>
   );
 };
 
-export default CreateAccountForm;
+export default CreateAccount;
