@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import './CreateAccount.css';
-import { useNavigate } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
+import '../../assets/css/CreateAccount.css'
+import Navbar from './navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTwitter, faSnapchat } from '@fortawesome/free-brands-svg-icons';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAqJkFz1-5jWC1MVnjPCdV0kfLLdkBiSA8",
@@ -15,14 +19,15 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const CreateAccount = () => {
+
+const CreateAccountForm = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleCreateAccount = () => {
+  //const CreateAccount = () => {
     if (username === '' || email === '' || password === '' || confirmPassword === '') {
       alert('Please fill out all fields!');
       return;
@@ -45,7 +50,7 @@ const CreateAccount = () => {
         console.log(errorCode, errorMessage);
         alert(errorMessage);
       });
-  };
+ // };
 
   return (
     <div>
@@ -61,9 +66,32 @@ const CreateAccount = () => {
       <label htmlFor="confirm-password">Confirm Password</label>
       <input type="password" id="confirm-password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
   
-      <button onClick={handleCreateAccount}>Create Account</button>
+      <button onClick={CreateAccountForm}>Create Account</button>
     </div>
   );
 };
 
-export default CreateAccount;
+const CreateAccountPage = () => {
+  return (
+    <>
+    <Navbar />
+      <h2>Creating an account is the first step to planning your next event with us!</h2>
+      <div className="form-container">
+        <div className="login-form">
+          <CreateAccountForm />   
+      <footer className="footer">
+        <div className="social-icons">
+        <Link to="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></Link>
+        <Link to="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></Link>
+        <Link to="https://twitter.com"><FontAwesomeIcon icon={faTwitter} /></Link>
+        <Link to="https://www.snapchat.com"><FontAwesomeIcon icon={faSnapchat} /></Link>
+        </div>
+      </footer>
+      </div>
+      </div>
+    </>
+  );
+};
+
+
+export default CreateAccountPage;

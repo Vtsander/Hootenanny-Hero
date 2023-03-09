@@ -15,9 +15,7 @@ import { auth } from './components/utils/firebase';
 import firebase from 'firebase/app';
 import './components/utils/firebase';
 import { createRoot } from "react-dom/client";
-
-
-
+import Congrats from './components/pages/congrats';
 /*import LoggedInNavbar from './components/LoggedInNavbar';
 /*import firebase from 'firebase/app';
 import 'firebase/auth';
@@ -48,6 +46,7 @@ function App() {
            <Route path="/login/CreateAccount" element={<CreateAccount />} />
            <Route path="/NewEvent" element={<CreateAccount />} />
            <Route path="/Checkout" element={<Checkout />} />
+           <Route path="/Congrats" element={<Congrats />} />
           </Routes>
         </div>
       </Router>

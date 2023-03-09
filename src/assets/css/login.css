@@ -1,117 +1,147 @@
-/*.login.css {
-  background-image: url('../../assets/images/hhlogin1.png');
-}*/
 
 body {
   background-color: #baa0be;
-  }
+}
 
-  /*img {
-    background-color: #baa0be;
-    background-image: url('../../assets/images/hhlogin1.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 800px 1200px;
-    }*/
-
- h2 {
+h2 {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
   margin-top: 200px;
-  /*margin-bottom: -200px;*/
-} 
-
-/*.hhlogin1 {
-  width: 500px;
-  height: 400px;
-  margin-top: 200px;
-}*/
+}
 
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  }
-  
-  .login-form {
-    font-weight: bold;
-    display: block;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid #331838;
-    border-radius: 5px;
-    box-shadow: 20px 20px 20px rgba(32, 9, 51, 0.2);
-    background-color: #b896be;
-    max-width: 400px;
-    width: 100%;
-    height: 400px;
-    /*margin-top: 0px;*/
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #7d4488;
-    color: #fff;
-    cursor: hand;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    margin-bottom: 40px;
-  }
-  
-  button a {
-    text-decoration: none;
-    color: white;
-  }
-  button:hover {
-    background-color: #682e80;
-  }
+  height: 400px;
+}
 
-  button[type="submit"] {
-    margin-right: 10px;
-  }
-  
-  button[type="button"] {
-    margin-left: 10px;
-  }
-  
-  .overlay.show {
-    display: block;
-  }
-  
-  label {
-    display: inline-flex;
-    margin-top: 80px;
-    color:rgb(57, 35, 59)
-  }
+.create-account-form {
+  font-weight: bold;
+  display: block;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #331838;
+  border-radius: 5px;
+  box-shadow: 20px 20px 20px rgba(32, 9, 51, 0.2);
+  background-color: #b896be;
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+}
 
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
 
-  .create-profile-link:hover {
-    background-color: #682e80;
-  }*/
+button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #7d4488;
+  color: #fff;
+  cursor: hand;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
 
-  .create-profile-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:hover {
+  background-color: #682e80;
+}
+
+button[type="submit"] {
+  margin-right: 10px;
+  margin-left: 50px;
+}
+
+button[type="button"] {
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+label {
+  display: inline-flex;
+  margin-top: 80px;
+  color: rgb(57, 35, 59);
+  font-size: 20px;
+}
+
+.create-profile-link:hover {
+  background-color: #b584c7;
+}
+
+.create-profile-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-right: 120px;
+  font-size: 20px;
+}
+
+.create-profile-link a {
+  align-items: center;
+  text-align: center;
+  margin-left: 150px;
+  text-decoration: none;
+  color: #240e27;
+}
+  
+.footer {
+  margin-top: 10px;
+  position: bottom;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: none;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-left: 30px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color: #a477bb;
+}
+
+/* Styles for screens larger than or equal to 768px */
+@media (min-width: 768px) {
+  /* Navbar styles */
+  .navbar {
+    height: 80px;
     font-size: 18px;
   }
-  
-  .create-profile-link a {
-    align-items: center;
-    text-align: center;
-    margin-left: 150px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+}
+
+  /* Styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  /* Navbar styles */
+  .navbar {
+    height: 60px;
+    font-size: 16px;
   }
-  
+}
