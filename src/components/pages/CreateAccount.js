@@ -42,4 +42,17 @@ const CreateAccountForm = () => {
   );
 };
 
-export default CreateAccountForm;
+const CreateAccountPage = () => {
+  return (
+    <>
+      <h2>Creating an account is the first step to planning your next event with us!</h2>
+      <div className="form-container">
+        <div className="login-form">
+          <CreateAccountForm />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default CreateAccountPage;

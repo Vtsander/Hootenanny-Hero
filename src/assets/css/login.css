@@ -1,99 +1,96 @@
 
 body {
   background-color: #baa0be;
-  }
+}
 
- h2 {
+h2 {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
   margin-top: 200px;
-} 
+}
 
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  }
-  
-  .login-form {
-    font-weight: bold;
-    display: block;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid #331838;
-    border-radius: 5px;
-    box-shadow: 20px 20px 20px rgba(32, 9, 51, 0.2);
-    background-color: #b896be;
-    max-width: 400px;
-    width: 100%;
-    height: 400px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #7d4488;
-    color: #fff;
-    cursor: hand;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    margin-bottom: 40px;
-  }
-  
-  button a {
-    text-decoration: none;
-    color: white;
-  }
-  button:hover {
-    background-color: #682e80;
-  }
+}
 
-  button[type="submit"] {
-    margin-right: 10px;
-    margin-left: 50px;
-  }
-  
-  button[type="button"] {
-    margin-left: 10px;
-    margin-right: 50px;
-  }
-  
-  .overlay.show {
-    display: block;
-  }
-  
-  label {
-    display: inline-flex;
-    margin-top: 80px;
-    color:rgb(57, 35, 59)
-  }
-  
-  .create-profile-link:hover {
-    background-color: #b584c7;
-  }*/
+.create-account-form {
+  font-weight: bold;
+  display: block;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #331838;
+  border-radius: 5px;
+  box-shadow: 20px 20px 20px rgba(32, 9, 51, 0.2);
+  background-color: #b896be;
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+}
 
-  .create-profile-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: px;
-  }
-  
-  .create-profile-link a {
-    align-items: center;
-    text-align: center;
-    margin-left: 150px;
-    text-decoration: none;
-    color: #240e27;
-  }
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #7d4488;
+  color: #fff;
+  cursor: hand;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:hover {
+  background-color: #682e80;
+}
+
+button[type="submit"] {
+  margin-right: 10px;
+  margin-left: 50px;
+}
+
+button[type="button"] {
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+label {
+  display: inline-flex;
+  margin-top: 80px;
+  color: rgb(57, 35, 59);
+}
+
+.create-profile-link:hover {
+  background-color: #b584c7;
+}
+
+.create-profile-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.create-profile-link a {
+  align-items: center;
+  text-align: center;
+  margin-left: 150px;
+  text-decoration: none;
+  color: #240e27;
+}
   
