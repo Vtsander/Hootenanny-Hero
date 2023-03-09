@@ -127,3 +127,21 @@ label {
 .social-icons a:hover {
   color: #a477bb;
 }
+
+/* Styles for screens larger than or equal to 768px */
+@media (min-width: 768px) {
+  /* Navbar styles */
+  .navbar {
+    height: 80px;
+    font-size: 18px;
+  }
+}
+
+  /* Styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  /* Navbar styles */
+  .navbar {
+    height: 60px;
+    font-size: 16px;
+  }
+}

@@ -14,6 +14,10 @@ const CreateAccountForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorage.setItem('name', name);
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
     navigate('/congrats');
   };
 
@@ -66,5 +70,6 @@ const CreateAccountPage = () => {
     </>
   );
 };
+
 
 export default CreateAccountPage;
