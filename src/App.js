@@ -6,9 +6,15 @@ import Events from './components/pages/Events';
 import Login from './components/pages/Login';
 import Profile from './components/pages/Profile';
 import ContactUs from './components/pages/ContactUs';
+import Budget from './components/pages/Budget';
+import StripeCheckout from 'react-stripe-checkout';
+import Checkout from './components/features/Checkout';
 import ThankYou from './components/pages/ThankYou';
 import CreateAccount from './components/pages/CreateAccount';
-import Budget from './components/pages/Budget';
+import { auth } from './components/utils/firebase';
+import firebase from 'firebase/app';
+import './components/utils/firebase';
+import { createRoot } from "react-dom/client";
 import Congrats from './components/pages/congrats';
 /*import LoggedInNavbar from './components/LoggedInNavbar';
 /*import firebase from 'firebase/app';
@@ -39,6 +45,7 @@ function App() {
             <Route path="/Budget" element={<Budget />} />
            <Route path="/login/CreateAccount" element={<CreateAccount />} />
            <Route path="/NewEvent" element={<CreateAccount />} />
+           <Route path="/Checkout" element={<Checkout />} />
            <Route path="/Congrats" element={<Congrats />} />
           </Routes>
         </div>
