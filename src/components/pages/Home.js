@@ -3,7 +3,6 @@ import hhevent from '../../assets/images/hhevent.png';
 /*import { Link } from 'react-router-dom';*/
 import './home.css';
 import Navbar from './navbar';
-import Footer from './../footer/footer';
 
 function Home() {
   return (
@@ -43,8 +42,7 @@ function Home() {
           </ul>
         </div>
       </div>
-      <Footer />
-    </div>
+  </div>
   );
 }
 

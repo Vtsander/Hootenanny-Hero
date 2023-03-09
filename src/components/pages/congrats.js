@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Confetti from 'react-confetti';
 import '../../assets/css/thankyou.css';
 
 const Congrats = () => {
@@ -7,6 +8,7 @@ const Congrats = () => {
     <div className="center">
       <h1>Congrats You successfully created an account!</h1>
       <Link to="/Profile" className="button">Take me to my new Profile!</Link>
+      <Confetti />
     </div>
   );
 };

@@ -4,7 +4,6 @@ import 'firebase/auth';*/
 import { useNavigate } from 'react-router-dom';
 import '../../assets/css/contactUs.css';
 import Navbar from './navbar';
-import Footer from './../footer/footer';
 
 const SubmitContactForm = () => {
   const [name, setName] = useState('');
@@ -67,7 +66,6 @@ const SubmitContactForm = () => {
         </label>
         <button type="submit">Submit</button>
       </form>
-    <Footer />
     </div>
   );
 };
