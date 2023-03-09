@@ -14,6 +14,8 @@ import CreateAccount from './components/pages/CreateAccount';
 import { auth } from './components/utils/firebase';
 import firebase from 'firebase/app';
 import './components/utils/firebase';
+import { createRoot } from "react-dom/client";
+
 
 
 /*import LoggedInNavbar from './components/LoggedInNavbar';

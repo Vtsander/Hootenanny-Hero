@@ -3,13 +3,6 @@ import StripeCheckout from 'react-stripe-checkout';
 
 
 
-//import Stripe from 'stripe';
-
-
-
-
-
-
 const MyComponent = () => {
   const [amount, setAmount] = useState(0);
 

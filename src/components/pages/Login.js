@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../assets/css/login.css';
-/*import CreateAccount from './CreateAccount';*/
+import CreateAccount from './CreateAccount';
 /*import hhlogin1 from '../../assets/images/hhlogin1.png';*/
-import { useNavigate } from 'react-router-dom';
 import Navbar from './navbar';
 import auth from '../utils/auth';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
-function Login({ onLogin }) {
+function Login() {
   const [emailOrUsername, setEmailOrUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -23,15 +22,14 @@ function Login({ onLogin }) {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    navigate('/profile');
   };
 
   const login = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, emailOrUsername, password)
-
       .then((userCredential) => {
         console.log(userCredential);
+        navigate('/profile');
       })
       .catch((error) => {
         console.log(error);
@@ -42,7 +40,6 @@ function Login({ onLogin }) {
     <>
       <Navbar />
       <h2>Login to start planning your next event!</h2>
-      {/*<img src={hhlogin1} alt="hhlogin1" className="hhlogin1" /> */}
       <div className="form-container">
         <form onSubmit={handleFormSubmit} className="login-form">
           <label>

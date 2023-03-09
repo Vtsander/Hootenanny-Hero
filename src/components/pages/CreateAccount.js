@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import './CreateAccount.css';
+import { useNavigate } from 'react-router-dom';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAqJkFz1-5jWC1MVnjPCdV0kfLLdkBiSA8",
@@ -11,6 +12,7 @@ const firebaseConfig = {
   messagingSenderId: "1085708570645",
   appId: "1:1085708570645:web:d4dfc4faf1b03ac210be1c"
 };
+
 firebase.initializeApp(firebaseConfig);
 
 const CreateAccount = () => {
@@ -18,6 +20,7 @@ const CreateAccount = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleCreateAccount = () => {
     if (username === '' || email === '' || password === '' || confirmPassword === '') {
@@ -34,7 +37,7 @@ const CreateAccount = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        window.location.href = 'profile.html';
+        navigate('/profile');
       })
       .catch((error) => {
         const errorCode = error.code;
