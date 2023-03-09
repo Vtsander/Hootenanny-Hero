@@ -1,189 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import LoggedInNavbar from './LoggedInNavbar';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTwitter, faSnapchat } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const NewEvent = () => {
-  const [flowers, setFlowers] = useState({
-    package1: { name: "Flowers Package 1", price: 2000, checked: false },
-    package2: { name: "Flowers Package 2", price: 3000, checked: false },
-    package3: { name: "Flowers Package 3", price: 5000, checked: false },
-  });
-
-  const [catering, setCatering] = useState({
-    package1: { name: "Catering Package 1", price: 5000, checked: false },
-    package2: { name: "Catering Package 2", price: 10000, checked: false },
-    package3: { name: "Catering Package 3", price: 15000, checked: false },
-  });
-
-  const [venue, setVenue] = useState({
-    package1: { name: "Venue Package 1", price: 5000, checked: false },
-    package2: { name: "Venue Package 2", price: 10000, checked: false },
-    package3: { name: "Venue Package 3", price: 15000, checked: false },
-  });
-
-  const [decor, setDecor] = useState({
-    package1: { name: "Dress Package 1", price: 5000, checked: false },
-    package2: { name: "Dress Package 2", price: 10000, checked: false },
-    package3: { name: "Dress Package 3", price: 15000, checked: false },
-  });
-
-  const [misc, setMisc] = useState({
-    package1: { name: "Misc Package 1", price: 5000, checked: false },
-    package2: { name: "Misc Package 2", price: 10000, checked: false },
-    package3: { name: "Misc Package 3", price: 15000, checked: false },
-  });
-
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  const handleCheckboxChange = (event) => {
-    const packageName = event.target.name;
-    const packageType = event.target.getAttribute("data-package-type");
-
-    let packageObj;
-
-    switch (packageType) {
-      case "flowers":
-        packageObj = flowers;
-        break;
-      case "catering":
-        packageObj = catering;
-        break;
-      case "venue":
-        packageObj = venue;
-        break;
-      case "decor":
-        packageObj = decor;
-        break; 
-      case "misc":
-        packageObj = misc;
-        break;
-      default:
-        break;
-    }
-
-    packageObj[packageName].checked = event.target.checked;
-
-    let price = 0;
-
-    Object.keys(flowers).forEach((packageName) => {
-      if (flowers[packageName].checked) {
-        price += flowers[packageName].price;
-      }
-    });
-
-    Object.keys(catering).forEach((packageName) => {
-      if (catering[packageName].checked) {
-        price += catering[packageName].price;
-      }
-    });
-
-    Object.keys(venue).forEach((packageName) => {
-      if (venue[packageName].checked) {
-        price += venue[packageName].price;
-      }
-    });
-
-    Object.keys(decor).forEach((packageName) => {
-        if (decor[packageName].checked) {
-          price += decor[packageName].price;
-        }
-      });
-
-    Object.keys(misc).forEach((packageName) => {
-        if (misc[packageName].checked) {
-          price += misc[packageName].price;
-        }
-      });
-
-    setTotalPrice(price);
-  };
-
+  
   return (
-    <div className="new-event-container">
-    <LoggedInNavbar />
-      <h1>Select Your Event Packages</h1>
-      <div className="package-container">
-        <h3>Flowers</h3>
-        {Object.keys(flowers).map((packageName) => (
-          <div key={packageName}>
-            <input
-              type="checkbox"
-              name={packageName}
-              data-package-type="flowers"
-              checked={flowers[packageName].checked}
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor={packageName}>{flowers[packageName].name}</label>
-          </div>
-        ))}
-      </div>
-      <div className="package-container">
-        <h3>Catering</h3>
-        {Object.keys(catering).map((packageName) => (
-          <div key={packageName}>
-            <input
-              type="checkbox"
-              name={packageName}
-              data-package-type="catering"
-              checked={catering[packageName].checked}
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor={packageName}>{catering[packageName].name}</label>
+    <div className="card bg-white card-rounded w-50">
+       <LoggedInNavbar />
+     <h2>Are you tired of the same old boring events? Well, we've got you covered! Our event planner is like a mad scientist, but instead of creating monsters, we create the wildest parties you've ever seen. From fire breathers to breakdancing grandmas, we'll make sure your event is the talk of the town. Just tell us your wildest dreams, and we'll make them a reality... without the risk of getting sued. </h2>
+
+     <h2> Wedding Packages</h2>
+     <h3>"Tie The Knot Package" </h3>
+     <p>Get hitched without a hitch with our Tie The Knot Package! We'll take care of everything from the flowers to the cake, so you can focus on tying the knot.</p>
+
+     <h2> Bridal Shower</h2>
+     <h3>Shower Me With Love Package </h3>
+      <p>Shower the bride-to-be with love with our Shower Me With Love Package! We'll handle everything from the decorations to the games, so you can focus on celebrating the bride.</p>
+
+     <h2> Party Packages</h2>
+     <h3>Let's Get This Party Started Package! </h3>
+      <p>Throw a party that'll go down in history with our We'll handle everything from the invitations to the music, so you can focus on having fun.</p>
+
+      <h2> Cooperate Events </h2>
+     <h3>Making Business Fun Package </h3>
+      <p>Make your next corporate event one to remember with our Making Business Fun Package! We'll handle everything from the venue to the catering, so you can focus on networking and having fun.</p>
+
+      <h2> Pick Your Own Poison</h2>
+     <h3>Don't see what you need? Let us know!</h3>
+      <p>Here, you get to call the shots and we'll make sure it's a hit. Want to ride in on an elephant? We'll make it happen (assuming you can get one to wear a tuxedo). Want a unicorn-themed bar? Say no more, we'll sprinkle some magic and make it happen. Want a rollercoaster ride during your wedding ceremony? We'll strap in and hold on tight. You dream it, we'll make it a reality (as long as it's legal, safe, and doesn't involve clowns).</p>
+      
+     <footer className="footer">
+        <div className="social-icons">
+        <Link to="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></Link>
+        <Link to="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></Link>
+        <Link to="https://twitter.com"><FontAwesomeIcon icon={faTwitter} /></Link>
+        <Link to="https://www.snapchat.com"><FontAwesomeIcon icon={faSnapchat} /></Link>
         </div>
-        ))}
-</div>
-<div className="package-container">
-        <h3>Venue</h3>
-        {Object.keys(venue).map((packageName) => (
-        <div key={packageName}>
-            <input
-                    type="checkbox"
-                    name={packageName}
-                    data-package-type="venue"
-                    checked={venue[packageName].checked}
-                    onChange={handleCheckboxChange}
-                    />
-                <label htmlFor={packageName}>{venue[packageName].name}</label>
-            </div>
-        ))}
-        </div>
-<div className="package-container">
-        <h3>Dress</h3>
-        {Object.keys(decor).map((packageName) => (
-          <div key={packageName}>
-            <input
-              type="checkbox"
-              name={packageName}
-              data-package-type="decor"
-              checked={decor[packageName].checked}
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor={packageName}>{decor[packageName].name}</label>
-          </div>
-        ))}
-      </div>
-<div className="package-container">
-        <h3>Misc</h3>
-        {Object.keys(misc).map((packageName) => (
-          <div key={packageName}>
-            <input
-              type="checkbox"
-              name={packageName}
-              data-package-type="misc"
-              checked={misc[packageName].checked}
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor={packageName}>{misc[packageName].name}</label>
-          </div>
-        ))}
-      </div>
-<div className="total-price-container">
-<h3>Total Price: ${totalPrice}</h3>
-</div>
-<button>Checkout</button>
-</div>
-);
+      </footer>
+    </div>
+  );
 };
 
 export default NewEvent;

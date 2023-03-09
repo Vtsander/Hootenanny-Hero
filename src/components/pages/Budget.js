@@ -8,31 +8,31 @@ import { Link } from 'react-router-dom';
 
 const BudgetPieChart = () => {
 
-  const [flowers, setFlowers] = useState({
+  const [flowers] = useState({
     package1: { name: "Flowers Package 1: $2,000.00", price: 2000, checked: false },
     package2: { name: "Flowers Package 2: $3,000.00", price: 3000, checked: false },
     package3: { name: "Flowers Package 3: $5,000.00", price: 5000, checked: false },
   });
 
-  const [catering, setCatering] = useState({
+  const [catering] = useState({
     package1: { name: "Catering Package 1: $5,000.00", price: 5000, checked: false },
     package2: { name: "Catering Package 2: $10,000.00", price: 10000, checked: false },
     package3: { name: "Catering Package 3: $15,000.00", price: 15000, checked: false },
   });
 
-  const [venue, setVenue] = useState({
+  const [venue] = useState({
     package1: { name: "Venue Package 1: $5,000.00", price: 5000, checked: false },
     package2: { name: "Venue Package 2: $10,000.00", price: 10000, checked: false },
     package3: { name: "Venue Package 3: $15,000.00", price: 15000, checked: false },
   });
 
-  const [decor, setDecor] = useState({
+  const [decor] = useState({
     package1: { name: "Decor Package 1: $5,000.00", price: 5000, checked: false },
     package2: { name: "Decor Package 2: $10,000.00", price: 10000, checked: false },
     package3: { name: "Decor Package 3: $15,000.00", price: 15000, checked: false },
   });
 
-  const [misc, setMisc] = useState({
+  const [misc] = useState({
     package1: { name: "Misc Package 1: $5,000.00", price: 5000, checked: false },
     package2: { name: "Misc Package 2: $10,000.00", price: 10000, checked: false },
     package3: { name: "Misc Package 3: $15,000.00", price: 15000, checked: false },
@@ -120,7 +120,6 @@ const [data, setData] = useState([]);
   
 const COLORS = ['#672762', '#d321c6','#cd64c7',  '#ea9fe5', '#543152'];
 
-const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index, payload }) => {
   const RADIAN = Math.PI / 180;
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
