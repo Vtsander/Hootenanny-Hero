@@ -2,37 +2,40 @@ import React, { useState } from "react";
 import "./budget.css";
 import { PieChart, Pie, Cell} from "recharts";
 import LoggedInNavbar from './LoggedInNavbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTwitter, faSnapchat } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const BudgetPieChart = () => {
 
   const [flowers, setFlowers] = useState({
-    package1: { name: "Flowers Package 1", price: 2000, checked: false },
-    package2: { name: "Flowers Package 2", price: 3000, checked: false },
-    package3: { name: "Flowers Package 3", price: 5000, checked: false },
+    package1: { name: "Flowers Package 1: $2,000.00", price: 2000, checked: false },
+    package2: { name: "Flowers Package 2: $3,000.00", price: 3000, checked: false },
+    package3: { name: "Flowers Package 3: $5,000.00", price: 5000, checked: false },
   });
 
   const [catering, setCatering] = useState({
-    package1: { name: "Catering Package 1", price: 5000, checked: false },
-    package2: { name: "Catering Package 2", price: 10000, checked: false },
-    package3: { name: "Catering Package 3", price: 15000, checked: false },
+    package1: { name: "Catering Package 1: $5,000.00", price: 5000, checked: false },
+    package2: { name: "Catering Package 2: $10,000.00", price: 10000, checked: false },
+    package3: { name: "Catering Package 3: $15,000.00", price: 15000, checked: false },
   });
 
   const [venue, setVenue] = useState({
-    package1: { name: "Venue Package 1", price: 5000, checked: false },
-    package2: { name: "Venue Package 2", price: 10000, checked: false },
-    package3: { name: "Venue Package 3", price: 15000, checked: false },
+    package1: { name: "Venue Package 1: $5,000.00", price: 5000, checked: false },
+    package2: { name: "Venue Package 2: $10,000.00", price: 10000, checked: false },
+    package3: { name: "Venue Package 3: $15,000.00", price: 15000, checked: false },
   });
 
   const [decor, setDecor] = useState({
-    package1: { name: "Decor Package 1", price: 5000, checked: false },
-    package2: { name: "Decor Package 2", price: 10000, checked: false },
-    package3: { name: "Decor Package 3", price: 15000, checked: false },
+    package1: { name: "Decor Package 1: $5,000.00", price: 5000, checked: false },
+    package2: { name: "Decor Package 2: $10,000.00", price: 10000, checked: false },
+    package3: { name: "Decor Package 3: $15,000.00", price: 15000, checked: false },
   });
 
   const [misc, setMisc] = useState({
-    package1: { name: "Misc Package 1", price: 5000, checked: false },
-    package2: { name: "Misc Package 2", price: 10000, checked: false },
-    package3: { name: "Misc Package 3", price: 15000, checked: false },
+    package1: { name: "Misc Package 1: $5,000.00", price: 5000, checked: false },
+    package2: { name: "Misc Package 2: $10,000.00", price: 10000, checked: false },
+    package3: { name: "Misc Package 3: $15,000.00", price: 15000, checked: false },
   });
 
   const [totalPrice, setTotalPrice] = useState(0);
@@ -231,6 +234,14 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
       <h3>Total Price: ${totalPrice}</h3>
      </div>
       <button>Checkout</button>
+      <footer className="footer">
+        <div className="social-icons">
+          <Link to="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></Link>
+          <Link to="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></Link>
+          <Link to="https://twitter.com"><FontAwesomeIcon icon={faTwitter} /></Link>
+          <Link to="https://www.snapchat.com"><FontAwesomeIcon icon={faSnapchat} /></Link>
+        </div>
+      </footer>
     </div>
   )
   
