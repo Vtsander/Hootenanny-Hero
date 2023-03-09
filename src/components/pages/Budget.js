@@ -104,7 +104,7 @@ const BudgetPieChart = () => {
     });
   
     const newData = [
-      { name: "Florals", value: floralsValue},
+      { name: "Flowers", value: floralsValue},
       { name: "Catering", value: cateringValue},
       { name: "Venue", value: venueValue},
       { name: "Decor", value: decorValue},
@@ -121,17 +121,19 @@ const [data, setData] = useState([]);
 const COLORS = ['#672762', '#d321c6','#cd64c7',  '#ea9fe5', '#543152'];
 
 const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index, payload }) => {
+  const RADIAN = Math.PI / 180;
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
-    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-      {`${(percent * 100).toFixed(0)}%`}
+    <text x={x} y={y} fill="white" textAnchor="middle" dominantBaseline="central">
+      {`${payload.name} ${Math.round(percent * 100)}%`}
     </text>
   );
 };
+
   return (
     <div style={{textAlign: "center"}}>
      <LoggedInNavbar />
@@ -233,7 +235,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
       <div className="total-price-container">
       <h3>Total Price: ${totalPrice}</h3>
      </div>
-      <button>Checkout</button>
+      <button><Link to="/checkout">Checkout</Link></button>
       <footer className="footer">
         <div className="social-icons">
           <Link to="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></Link>
