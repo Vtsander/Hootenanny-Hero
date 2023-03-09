@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import './CreateAccount.css'
+import '../../assets/css/CreateAccount.css'
+import Navbar from './navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTwitter, faSnapchat } from '@fortawesome/free-brands-svg-icons';
 
 const CreateAccountForm = () => {
   const [name, setName] = useState('');
@@ -16,6 +19,7 @@ const CreateAccountForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>  
+     <Navbar />
       <label>
         Name:
         <input type="name" value={name} onChange={(e) => setName(e.target.value)} />
@@ -48,8 +52,16 @@ const CreateAccountPage = () => {
       <h2>Creating an account is the first step to planning your next event with us!</h2>
       <div className="form-container">
         <div className="login-form">
-          <CreateAccountForm />
+          <CreateAccountForm />   
+      <footer className="footer">
+        <div className="social-icons">
+        <Link to="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></Link>
+        <Link to="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></Link>
+        <Link to="https://twitter.com"><FontAwesomeIcon icon={faTwitter} /></Link>
+        <Link to="https://www.snapchat.com"><FontAwesomeIcon icon={faSnapchat} /></Link>
         </div>
+      </footer>
+      </div>
       </div>
     </>
   );

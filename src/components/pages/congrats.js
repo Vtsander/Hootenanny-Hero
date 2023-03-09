@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Confetti from 'react-confetti';
-import '../../assets/css/thankyou.css';
+import '../../assets/css/congrats.css';
 
 const Congrats = () => {
   return (

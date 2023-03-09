@@ -14,7 +14,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 400px;
 }
 
 .create-account-form {
@@ -73,6 +73,7 @@ label {
   display: inline-flex;
   margin-top: 80px;
   color: rgb(57, 35, 59);
+  font-size: 20px;
 }
 
 .create-profile-link:hover {
@@ -82,8 +83,10 @@ label {
 .create-profile-link {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-right: 120px;
+  font-size: 20px;
 }
 
 .create-profile-link a {
@@ -94,3 +97,33 @@ label {
   color: #240e27;
 }
   
+.footer {
+  margin-top: 10px;
+  position: bottom;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: none;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-left: 30px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color: #a477bb;
+}
