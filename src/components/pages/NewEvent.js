@@ -10,19 +10,20 @@ const NewEvent = () => {
   return (
     <div className="card bg-white card-rounded w-50">
        <LoggedInNavbar />
-     <h2>Are you tired of the same old boring events? Well, we've got you covered! Our event planner is like a mad scientist, but instead of creating monsters, we create the wildest parties you've ever seen. From fire breathers to breakdancing grandmas, we'll make sure your event is the talk of the town. Just tell us your wildest dreams, and we'll make them a reality... without the risk of getting sued. </h2>
+     <h2>Fresh Event Concepts</h2>
+      <h3>Are you tired of the same old boring events? Well, we've got you covered! Our event planner is like a mad scientist, but instead of creating monsters, we create the wildest parties you've ever seen. From fire breathers to breakdancing grandmas, we'll make sure your event is the talk of the town. Just tell us your wildest dreams, and we'll make them a reality... without the risk of getting sued. </h3>
 
-     <h2> Wedding Packages</h2>
+     <h2> Weddings</h2>
      <h3>"Tie The Knot Package" </h3>
-     <p>Get hitched without a hitch with our Tie The Knot Package! We'll take care of everything from the flowers to the cake, so you can focus on tying the knot.</p>
+     <p>Make the bride-to-be feel extra special with our Shower Me With Love Package. We'll take care of the decorations and games, so you can focus on creating memories that will last a lifetime.</p>
 
      <h2> Bridal Shower</h2>
      <h3>Shower Me With Love Package </h3>
-      <p>Shower the bride-to-be with love with our Shower Me With Love Package! We'll handle everything from the decorations to the games, so you can focus on celebrating the bride.</p>
+      <p>Get hitched without a hitch with our Tie The Knot Package! We'll take care of everything from the flowers to the cake, so you can focus on tying the knot.</p>
 
-     <h2> Party Packages</h2>
+     <h2> Parties</h2>
      <h3>Let's Get This Party Started Package! </h3>
-      <p>Throw a party that'll go down in history with our We'll handle everything from the invitations to the music, so you can focus on having fun.</p>
+      <p>Make history with an unforgettable party experience! With our expert team taking care of everything from invitations to music, you can sit back, relax, and enjoy the celebration. Let us help you create memories that will last a lifetime.</p>
 
       <h2> Cooperate Events </h2>
      <h3>Making Business Fun Package </h3>
