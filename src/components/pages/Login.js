@@ -5,6 +5,8 @@ import '../../assets/css/login.css';
 /*import hhlogin1 from '../../assets/images/hhlogin1.png';*/
 import { useNavigate } from 'react-router-dom';
 import Navbar from './navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTwitter, faSnapchat } from '@fortawesome/free-brands-svg-icons';
 
 function Login({ onLogin }) {
   const [emailOrUsername, setEmailOrUsername] = useState('');
@@ -50,6 +52,14 @@ function Login({ onLogin }) {
           </div>
         </form>
       </div>
+      <footer className="footer">
+        <div className="social-icons">
+        <Link to="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></Link>
+        <Link to="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></Link>
+        <Link to="https://twitter.com"><FontAwesomeIcon icon={faTwitter} /></Link>
+        <Link to="https://www.snapchat.com"><FontAwesomeIcon icon={faSnapchat} /></Link>
+        </div>
+      </footer>
     </>
   );
 }
