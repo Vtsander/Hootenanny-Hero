@@ -22,6 +22,18 @@ const NewEvent = () => {
     package3: { name: "Venue Package 3", price: 15000, checked: false },
   });
 
+  const [decor, setDecor] = useState({
+    package1: { name: "Dress Package 1", price: 5000, checked: false },
+    package2: { name: "Dress Package 2", price: 10000, checked: false },
+    package3: { name: "Dress Package 3", price: 15000, checked: false },
+  });
+
+  const [misc, setMisc] = useState({
+    package1: { name: "Misc Package 1", price: 5000, checked: false },
+    package2: { name: "Misc Package 2", price: 10000, checked: false },
+    package3: { name: "Misc Package 3", price: 15000, checked: false },
+  });
+
   const [totalPrice, setTotalPrice] = useState(0);
 
   const handleCheckboxChange = (event) => {
@@ -39,6 +51,12 @@ const NewEvent = () => {
         break;
       case "venue":
         packageObj = venue;
+        break;
+      case "decor":
+        packageObj = decor;
+        break; 
+      case "misc":
+        packageObj = misc;
         break;
       default:
         break;
@@ -65,6 +83,18 @@ const NewEvent = () => {
         price += venue[packageName].price;
       }
     });
+
+    Object.keys(decor).forEach((packageName) => {
+        if (decor[packageName].checked) {
+          price += decor[packageName].price;
+        }
+      });
+
+    Object.keys(misc).forEach((packageName) => {
+        if (misc[packageName].checked) {
+          price += misc[packageName].price;
+        }
+      });
 
     setTotalPrice(price);
   };
@@ -100,24 +130,54 @@ const NewEvent = () => {
               onChange={handleCheckboxChange}
             />
             <label htmlFor={packageName}>{catering[packageName].name}</label>
-</div>
-))}
+        </div>
+        ))}
 </div>
 <div className="package-container">
-<h3>Venue</h3>
-{Object.keys(venue).map((packageName) => (
-<div key={packageName}>
-<input
-           type="checkbox"
-           name={packageName}
-           data-package-type="venue"
-           checked={venue[packageName].checked}
-           onChange={handleCheckboxChange}
-         />
-<label htmlFor={packageName}>{venue[packageName].name}</label>
-</div>
-))}
-</div>
+        <h3>Venue</h3>
+        {Object.keys(venue).map((packageName) => (
+        <div key={packageName}>
+            <input
+                    type="checkbox"
+                    name={packageName}
+                    data-package-type="venue"
+                    checked={venue[packageName].checked}
+                    onChange={handleCheckboxChange}
+                    />
+                <label htmlFor={packageName}>{venue[packageName].name}</label>
+            </div>
+        ))}
+        </div>
+<div className="package-container">
+        <h3>Dress</h3>
+        {Object.keys(decor).map((packageName) => (
+          <div key={packageName}>
+            <input
+              type="checkbox"
+              name={packageName}
+              data-package-type="decor"
+              checked={decor[packageName].checked}
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor={packageName}>{decor[packageName].name}</label>
+          </div>
+        ))}
+      </div>
+<div className="package-container">
+        <h3>Misc</h3>
+        {Object.keys(misc).map((packageName) => (
+          <div key={packageName}>
+            <input
+              type="checkbox"
+              name={packageName}
+              data-package-type="misc"
+              checked={misc[packageName].checked}
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor={packageName}>{misc[packageName].name}</label>
+          </div>
+        ))}
+      </div>
 <div className="total-price-container">
 <h3>Total Price: ${totalPrice}</h3>
 </div>
