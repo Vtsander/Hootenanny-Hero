@@ -4,31 +4,31 @@ import LoggedInNavbar from './LoggedInNavbar';
 
 
 const NewEvent = () => {
-  const [flowers, setFlowers] = useState({
+  const [flowers] = useState({
     package1: { name: "Flowers Package 1", price: 2000, checked: false },
     package2: { name: "Flowers Package 2", price: 3000, checked: false },
     package3: { name: "Flowers Package 3", price: 5000, checked: false },
   });
 
-  const [catering, setCatering] = useState({
+  const [catering] = useState({
     package1: { name: "Catering Package 1", price: 5000, checked: false },
     package2: { name: "Catering Package 2", price: 10000, checked: false },
     package3: { name: "Catering Package 3", price: 15000, checked: false },
   });
 
-  const [venue, setVenue] = useState({
+  const [venue] = useState({
     package1: { name: "Venue Package 1", price: 5000, checked: false },
     package2: { name: "Venue Package 2", price: 10000, checked: false },
     package3: { name: "Venue Package 3", price: 15000, checked: false },
   });
 
-  const [decor, setDecor] = useState({
+  const [decor] = useState({
     package1: { name: "Dress Package 1", price: 5000, checked: false },
     package2: { name: "Dress Package 2", price: 10000, checked: false },
     package3: { name: "Dress Package 3", price: 15000, checked: false },
   });
 
-  const [misc, setMisc] = useState({
+  const [misc] = useState({
     package1: { name: "Misc Package 1", price: 5000, checked: false },
     package2: { name: "Misc Package 2", price: 10000, checked: false },
     package3: { name: "Misc Package 3", price: 15000, checked: false },
