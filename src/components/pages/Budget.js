@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const BudgetPieChart = () => {
 
-  const [flowers, setFlowers] = useState({
+  const [flowers] = useState({
     package1: { name: "Flowers Package 1: $2,000.00", price: 2000, checked: false },
     package2: { name: "Flowers Package 2: $3,000.00", price: 3000, checked: false },
     package3: { name: "Flowers Package 3: $5,000.00", price: 5000, checked: false },
@@ -120,7 +120,6 @@ const [data, setData] = useState([]);
   
 const COLORS = ['#672762', '#d321c6','#cd64c7',  '#ea9fe5', '#543152'];
 
-const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index, payload }) => {
   const RADIAN = Math.PI / 180;
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
