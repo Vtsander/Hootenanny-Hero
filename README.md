@@ -2,7 +2,7 @@
 
 
 
-**Hootenanny Hero** is an event planning application built using HTML, CSS, JS, MySQL, Handlebars.js, Sequelize, Json, insomnia, prettier, bootstrap, express, Stripe and node.js.
+**Hootenanny Hero** is an event planning application built using HTML, CSS, JS, Graphql, Firebase, Prettier, Confetti, React, Bcrypt, Chart.js, Bootstrap, Express, Stripe and Node.js.
 
 <br>
 
@@ -12,32 +12,37 @@
 <br>
 
 ## Home Page
-![Image of the Home page]
+![Image of the Home page](src/assets/images/hhomepage.png)
 
 <br>
 
 ## Login Page
-![Image of the Login Page]
+![Image of the Login Page](src/assets/images/hhloginSS.png)
+
+<br>
+
+## Profile Page
+![Image of the Profile Page](src/assets/images/hprofile.png)
 
 <br>
 
 ## Create a Profile Page
-![Image of the Profile Page]
+![Image of the Profile Page](src/assets/images/hcreateaccount.png)
 
 <br>
 
-## Event Building Page
-![Image of the Event Building Page]
+## Congrats Page
+![Image of the Event Building Page](src/assets/images/hconfetti.png)
 
 <br>
 
 ## Event Budgeting Page
-![Image of the Event Budgeting page]
+![Image of the Event Budgeting page](src/assets/images/hbudget.png)
 
 <br>
 
-## Check Out Page
-![Image of the Check Out page]
+## Contact Us Page
+![Image of the Check Out page](src/assets/images/hcontactus.png)
 
 
 <br>
@@ -82,38 +87,38 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
   ## Image of the Home Page Wireframe
   ***
-  ![Image of Home page WireFrame](client/src/images/hhomepage.png)
+  ![Image of Home page WireFrame](assets/images/hhomepage.png)
 
 <br>
 
   ## Image of the Login Page Wireframe
   ***
-  ![Image of Login WireFrame](client/src/images/hlogin.png)
+  ![Image of Login WireFrame](assets/images/hlogin.png)
 
 <br>
 
   ## Image of the Profile Page  Wireframe
   ***
-  ![Profile Page](client/src/images/hprofile.png)
+  ![Profile Page](assets/images/hprofile.png)
 
 <br>
 
-  ## Image of the Event Buuilding Wireframe
+  ## Image of the Event Building Wireframe
   ***
-  ![Event Building](client/src/images/eventbuilding.png)
+  ![Event Building](assets/images/eventbuilding.png)
 
 <br>
 
   ## Image of the Event Budgeting Wireframe
   ***
 
-  ![Event Budgeting](client/src/images/hbudgetinggraph.png)
+  ![Event Budgeting](assets/images/hbudgetinggraph.png)
  
 <br>
 
   ## Image of the Checkout Page  Wireframe
   ***
-  ![Check Out](client/src/images/hcheckout.png)
+  ![Check Out](assets/images/hcheckout.png)
 
   <br>
  
@@ -135,16 +140,18 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
     HTML 
     CSS 
     JS 
-    MySQL
-    Handlebars.js
-    Seqealize
+    Mongodb
+    Mongoose
+    Graphql
     Json 
     Express 
     Node.js
     Bootstrap
     Bcrypt
-    Insomnia
+    Firebase
+    Chart.js
     Prettier
+    Confetti
     Stripe
  
 <br>
@@ -157,13 +164,14 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
 ## THE DEPLOYED REPO CAN BE FOUND AT THE FOLLOWING URL:
 ***
-[ Deployed App ]
+
+[Click Here](https://fabulous-entremet-fa0b27.netlify.app/)
 
 <br>
 
   ## INSTALLATION OF THE REPO FROM GITHUB
   ***
-  A copy of the repository can be cloned at [Click Here](https://github.com/Vtsander/Hootenanny-Hero) Simply click on the repo and select **Clone**. From the drop down menu select the copy icon. Type (directly into your terminal):
+  A copy of the repository can be cloned at [Click Here](https://github.com/Vtsander/Hootenanny-Hero/fork) Simply click on the repo and select **Clone**. From the drop down menu select the copy icon. Type (directly into your terminal):
   
   ```
   'git clone' + 'the repo link' + enter.
@@ -174,6 +182,8 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
   ## FUTURE ITERATIONS
   ***
   **FUTURE ITERATIONS**- 
+
+  Allow clients to make tailored packages for thier events. As well as saving photos, venues and vendors to their profile for easy sharing and referencing.
 
   <br>
   
