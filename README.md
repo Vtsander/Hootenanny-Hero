@@ -59,11 +59,11 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
 *I would like to plan an event and have it tailored to my specific needs and vision.*
 ***
-   **BUILDING** for my  event. Building a package of flowers, caterers, venue, security and more,  all in one easy to use place. 
+   **BUILDING** for my event. Building a package of flowers, caterers, venue, security and more, all in one easy to use place. 
 
    **Budgeting** remaining within my budget is top priority. Having many options to choose from and staying within my budget is my #1 goal while planning an event.
 
-   **DISCOVER** new venues, themes and catering options, is a must.
+   **DISCOVER** new venues, themes, decor and catering options, is a must.
  
 
  <br>
