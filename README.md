@@ -50,7 +50,7 @@
 
 ## User Story
 ***
-Welcome to our event planner website, your one-stop-shop for creating unforgettable events. Whether you're planning a corporate conference, a wedding, or a birthday party, our website has everything you need to make your event a success. We also offer a range of event planning tools to help you stay organized and on top of your to-do list. With our event planner website, you can plan your dream event without the stress and hassle. So why wait? Sign up now and start planning your perfect event today! 
+Welcome to our event planner website, your one-stop-shop for creating unforgettable events. Whether you're planning a corporate conference, a wedding, or a birthday party, our app has everything you need to make your event a success. We also offer a range of event planning tools to help you stay organized, on top of your to-do list and within your budget. With our event planner website, you can plan your dream event without the stress and hassle. So why wait? Sign up now and start planning your perfect event today! 
 
 ## As an event host:
 ***
