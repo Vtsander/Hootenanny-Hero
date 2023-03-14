@@ -2,7 +2,7 @@
 
 
 
-**Hootenanny Hero** is an event planning application built using HTML, CSS, JS, MySQL, Handlebars.js, Sequelize, Json, insomnia, prettier, bootstrap, express, Stripe and node.js.
+**Hootenanny Hero** is an event planning application built using HTML, CSS, JS, Bcrypt, MongoDb, Mongoose, Json, Chart.js, Prettier, Bootstrap, Express, Stripe, Firebase and Node.js.
 
 <br>
 
@@ -12,32 +12,32 @@
 <br>
 
 ## Home Page
-![Image of the Home page]
+![Image of the Home page](src/assets/images/hhhomepageSS.png)
 
 <br>
 
 ## Login Page
-![Image of the Login Page]
+![Image of the Login Page](src/assets/images/hhloginSS.png)
 
 <br>
 
 ## Create a Profile Page
-![Image of the Profile Page]
+![Image of the Profile Page](src/assets/images/hcreatepage.png)
 
 <br>
 
-## Event Building Page
-![Image of the Event Building Page]
+## Congrats Page
+![Image of the Congrats Page](src/assets/images/hcongrats.png)
 
 <br>
 
-## Event Budgeting Page
-![Image of the Event Budgeting page]
+## Contact Us Page
+![Image of the Contact Us page](src/assets/images/hcontactus.png)
 
 <br>
 
-## Check Out Page
-![Image of the Check Out page]
+## Budget Page
+![Image of the Budget page](src/assets/images/hbudget.png)
 
 
 <br>
@@ -54,7 +54,7 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
 *I would like to plan an event and have it tailored to my specific needs and vision.*
 ***
-   **BUILDING** for my  event. Building a package of flowers, caterers, venue, security and more,  all in one easy to use place. 
+   **BUILDING** for my event. Building a package of flowers, caterers, venue, security and more, all in one easy to use place. 
 
    **Budgeting** remaining within my budget is top priority. Having many options to choose from and staying within my budget is my #1 goal while planning an event.
 
@@ -82,38 +82,38 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
   ## Image of the Home Page Wireframe
   ***
-  ![Image of Home page WireFrame](client/src/images/hhomepage.png)
+  ![Image of Home page WireFrame](assets/images/hhomepage.png)
 
 <br>
 
   ## Image of the Login Page Wireframe
   ***
-  ![Image of Login WireFrame](client/src/images/hlogin.png)
+  ![Image of Login WireFrame](assets/images/hlogin.png)
 
 <br>
 
   ## Image of the Profile Page  Wireframe
   ***
-  ![Profile Page](client/src/images/hprofile.png)
+  ![Profile Page](assets/images/hprofile.png)
 
 <br>
 
-  ## Image of the Event Buuilding Wireframe
+  ## Image of the Event Building Wireframe
   ***
-  ![Event Building](client/src/images/eventbuilding.png)
+  ![Event Building](src/assets/images/eventbuilding.png)
 
 <br>
 
   ## Image of the Event Budgeting Wireframe
   ***
 
-  ![Event Budgeting](client/src/images/hbudgetinggraph.png)
+  ![Event Budgeting](assets/images/hbudgetinggraph.png)
  
 <br>
 
   ## Image of the Checkout Page  Wireframe
   ***
-  ![Check Out](client/src/images/hcheckout.png)
+  ![Check Out](assets/images/hcheckout.png)
 
   <br>
  
@@ -124,10 +124,6 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
 <br>
 
-  ## THIRD PARTY APIs
-  ***
-   [ Api info ]
-
    <br>
 
   ## TECHNOLOGY USED
@@ -135,15 +131,15 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
     HTML 
     CSS 
     JS 
-    MySQL
-    Handlebars.js
-    Seqealize
+    Mongodb
+    Mongoose
+    Firebase
     Json 
     Express 
     Node.js
     Bootstrap
     Bcrypt
-    Insomnia
+    Chart.js
     Prettier
     Stripe
  
@@ -163,7 +159,7 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
   ## INSTALLATION OF THE REPO FROM GITHUB
   ***
-  A copy of the repository can be cloned at [Click Here](https://github.com/Vtsander/Hootenanny-Hero) Simply click on the repo and select **Clone**. From the drop down menu select the copy icon. Type (directly into your terminal):
+  A copy of the repository can be cloned at [Click Here](https://github.com/Lycanchic/Hootenanny-Hero) Simply click on the repo and select **Clone**. From the drop down menu select the copy icon. Type (directly into your terminal):
   
   ```
   'git clone' + 'the repo link' + enter.
@@ -173,7 +169,7 @@ Welcome to our event planner website, your one-stop-shop for creating unforgetta
 
   ## FUTURE ITERATIONS
   ***
-  **FUTURE ITERATIONS**- 
+  **FUTURE ITERATIONS**- to allow customers to save photos, links and contact info to their profile for easy organization and access.
 
   <br>
   
